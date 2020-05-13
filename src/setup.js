@@ -37,9 +37,8 @@ light.specular = BABYLON.Color3.Black();
 
   engine.displayLoadingUI();
 
-BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, function (newMeshes, particleSystems, skeletons) {
+BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "model.babylon", scene, function (newMeshes, particleSystems, skeletons) {
       var skeleton = skeletons[0];
-
       shadowGenerator.addShadowCaster(scene.meshes[0], true);
       for (var index = 0; index < newMeshes.length; index++) {
           newMeshes[index].receiveShadows = false;;
@@ -80,7 +79,8 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button.width = "100px";
       button.height = "50px";
       button.color = "white";
-      button.background = "green";
+      button.background = "chocolate";
+      button.borderRadius='15px'
       button.onPointerDownObservable.add(()=> {
           if (idleRange) scene.beginAnimation(skeleton, idleRange.from, idleRange.to, true);
       });
@@ -91,7 +91,7 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button1.width = "100px";
       button1.height = "50px";
       button1.color = "white";
-      button1.background = "green";
+      button1.background = "chocolate";
       button1.onPointerDownObservable.add(()=> {
           if (walkRange) scene.beginAnimation(skeleton, walkRange.from, walkRange.to, true);
       });
@@ -102,7 +102,7 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button1.width = "100px";
       button1.height = "50px";
       button1.color = "white";
-      button1.background = "green";
+      button1.background = "chocolate";
       button1.onPointerDownObservable.add(()=> {
           if (runRange) scene.beginAnimation(skeleton, runRange.from, runRange.to, true);
       });
@@ -113,7 +113,7 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button1.width = "100px";
       button1.height = "50px";
       button1.color = "white";
-      button1.background = "green";
+      button1.background = "chocolate";
       button1.onPointerDownObservable.add(()=> {
           if (leftRange) scene.beginAnimation(skeleton, leftRange.from, leftRange.to, true);
       });
@@ -124,7 +124,7 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button1.width = "100px";
       button1.height = "50px";
       button1.color = "white";
-      button1.background = "green";
+      button1.background = "chocolate";
       button1.onPointerDownObservable.add(()=> {
           if (rightRange) scene.beginAnimation(skeleton, rightRange.from, rightRange.to, true);
       });
@@ -135,7 +135,7 @@ BABYLON.SceneLoader.ImportMesh("", "./src/scenes/", "dummy3.babylon", scene, fun
       button1.width = "100px";
       button1.height = "50px";
       button1.color = "white";
-      button1.background = "green";
+      button1.background = "chocolate";
       button1.onPointerDownObservable.add(()=> {
           if (walkRange && leftRange) {
               scene.stopAnimation(skeleton);
